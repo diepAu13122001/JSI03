@@ -122,22 +122,30 @@ class Person {
 }
 
 const p1 = new Person("Diep");
-p1.walk();
-console.log(p1.name);
+// p1.walk();
+// console.log(p1.name);
 
 // ---------------------------- Inheritance ----------------------
 class Teacher extends Person {
-    constructor(name, degree) {
-        super(name);
-        this.degree = degree;
-    }
+  constructor(name, degree) {
+    super(name);
+    this.degree = degree;
+  }
 
-    teach() {
-        console.log('teach');
-    }
+  teach() {
+    console.log("teach");
+  }
 }
 
-const teacher1 = new Teacher('Diep', 'MSc');
-console.log(teacher1.walk());
+// const teacher1 = new Teacher("Diep", "MSc");
+// console.log(teacher1.walk());
 
-// lọc 
+// ------- Bài tập ------------------
+const list = [1, 2, 3, 40, 59];
+// lọc số chia hết cho 2 và in ra console
+const rs1 = list.filter(item => item%2==0);
+console.log(rs1);
+
+// lọc số trên 10 và in ra console
+const rs2 = list.filter(item => item>10);
+console.log(rs2);
